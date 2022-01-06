@@ -150,7 +150,7 @@ class LoginView extends GetView<LoginController> {
             padding: EdgeInsets.symmetric(horizontal: 75),
             child: ElevatedButton(
                 onPressed: () {
-                  Get.toNamed(Routes.LOGIN);
+                  Get.toNamed(Routes.REGISTER);
                 },
                 style: ElevatedButton.styleFrom(
                     primary: Color(0xFFFE9C8F),
