@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import 'package:carry/app/modules/category/bindings/category_binding.dart';
 import 'package:carry/app/modules/category/views/category_view.dart';
+import 'package:carry/app/modules/furniture/bindings/furniture_binding.dart';
+import 'package:carry/app/modules/furniture/views/furniture_view.dart';
 import 'package:carry/app/modules/home/bindings/home_binding.dart';
 import 'package:carry/app/modules/home/views/home_view.dart';
 import 'package:carry/app/modules/login/bindings/login_binding.dart';
@@ -43,6 +45,11 @@ class AppPages {
       name: _Paths.CATEGORY,
       page: () => CategoryView(),
       binding: CategoryBinding(),
+    ),
+    GetPage(
+      name: _Paths.FURNITURE,
+      page: () => FurnitureView(),
+      binding: FurnitureBinding(),
     ),
   ];
 }

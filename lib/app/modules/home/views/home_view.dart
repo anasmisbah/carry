@@ -122,7 +122,7 @@ class HomeView extends GetView<HomeController> {
             TitleSection(
               title: "Today's Promo",
               onTap: () {
-                print("clicked");
+                Get.toNamed(Routes.FURNITURE);
               },
             ),
             SizedBox(
@@ -188,6 +188,72 @@ class HomeView extends GetView<HomeController> {
             ),
             TitleSection(
               title: "Trending Furniture",
+              onTap: () {
+                print("clicked");
+              },
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Container(
+                padding: EdgeInsets.only(left: 20),
+                child: Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(right: 15),
+                      width: 210,
+                      height: 130,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/trending-1.png"),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 15),
+                      width: 210,
+                      height: 130,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/trending-2.png"),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 15),
+                      width: 210,
+                      height: 130,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/trending-1.png"),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 10),
+                      width: 210,
+                      height: 130,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/trending-2.png"),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            TitleSection(
+              title: "New Arrival Furniture",
               onTap: () {
                 print("clicked");
               },
