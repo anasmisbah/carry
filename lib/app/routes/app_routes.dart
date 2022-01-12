@@ -10,6 +10,7 @@ abstract class Routes {
   static const REGISTER = _Paths.REGISTER;
   static const CATEGORY = _Paths.CATEGORY;
   static const FURNITURE = _Paths.FURNITURE;
+  static const DETAIL_FURNITURE = _Paths.DETAIL_FURNITURE;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const REGISTER = '/register';
   static const CATEGORY = '/category';
   static const FURNITURE = '/furniture';
+  static const DETAIL_FURNITURE = '/detail-furniture';
 }

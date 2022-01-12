@@ -1,3 +1,4 @@
+import 'package:carry/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -371,7 +372,7 @@ class FurnitureView extends GetView<FurnitureController> {
               crossAxisCount: 2,
               mainAxisSpacing: 15,
               crossAxisSpacing: 15,
-              childAspectRatio: 0.8,
+              childAspectRatio: 0.7,
               children: <Widget>[
                 FurniturItem(
                   image: "assets/images/furniture-1.png",
@@ -465,136 +466,141 @@ class FurniturItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(10),
-      decoration: BoxDecoration(color: Colors.white),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Stack(
-            children: [
-              Align(
-                alignment: Alignment.center,
-                child: Container(
-                  height: 143,
+    return InkWell(
+      onTap: () {
+        Get.toNamed(Routes.DETAIL_FURNITURE);
+      },
+      child: Container(
+        padding: EdgeInsets.all(10),
+        decoration: BoxDecoration(color: Colors.white),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
+              children: [
+                Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                    height: 143,
+                    child: Image.asset(
+                      image,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                    decoration: BoxDecoration(
+                      color: Color(0xFF000000),
+                      borderRadius: BorderRadius.circular(200),
+                    ),
+                    child: Text(
+                      "30%",
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Text(
+              "Chair Dacey li - Black",
+              style: TextStyle(
+                color: Color(0xFF202020),
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Row(
+              children: [
+                Text(
+                  "\$50.00",
+                  style: TextStyle(
+                    color: Color(0xFFFE9C8F),
+                  ),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Text(
+                  "\$80.00",
+                  style: TextStyle(
+                    color: Color(0xFFB1ADAD).withOpacity(0.4),
+                    fontSize: 10,
+                    decoration: TextDecoration.lineThrough,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      height: 12,
+                      child: Image.asset(
+                        "assets/icons/star_gold.png",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    Container(
+                      height: 12,
+                      child: Image.asset(
+                        "assets/icons/star_gold.png",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    Container(
+                      height: 12,
+                      child: Image.asset(
+                        "assets/icons/star_gold.png",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    Container(
+                      height: 12,
+                      child: Image.asset(
+                        "assets/icons/star_gold.png",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    Container(
+                      height: 12,
+                      child: Image.asset(
+                        "assets/icons/star_gold.png",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    Container(
+                      height: 12,
+                      child: Image.asset(
+                        "assets/icons/star_gold.png",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text("5.0"),
+                  ],
+                ),
+                Container(
+                  height: 18,
                   child: Image.asset(
-                    image,
+                    "assets/icons/heart_primary.png",
                     fit: BoxFit.contain,
                   ),
                 ),
-              ),
-              Align(
-                alignment: Alignment.topRight,
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-                  decoration: BoxDecoration(
-                    color: Color(0xFF000000),
-                    borderRadius: BorderRadius.circular(200),
-                  ),
-                  child: Text(
-                    "30%",
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          Text(
-            "Chair Dacey li - Black",
-            style: TextStyle(
-              color: Color(0xFF202020),
-            ),
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Row(
-            children: [
-              Text(
-                "\$50.00",
-                style: TextStyle(
-                  color: Color(0xFFFE9C8F),
-                ),
-              ),
-              SizedBox(
-                width: 5,
-              ),
-              Text(
-                "\$80.00",
-                style: TextStyle(
-                  color: Color(0xFFB1ADAD).withOpacity(0.4),
-                  fontSize: 10,
-                  decoration: TextDecoration.lineThrough,
-                ),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    height: 12,
-                    child: Image.asset(
-                      "assets/icons/star_gold.png",
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  Container(
-                    height: 12,
-                    child: Image.asset(
-                      "assets/icons/star_gold.png",
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  Container(
-                    height: 12,
-                    child: Image.asset(
-                      "assets/icons/star_gold.png",
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  Container(
-                    height: 12,
-                    child: Image.asset(
-                      "assets/icons/star_gold.png",
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  Container(
-                    height: 12,
-                    child: Image.asset(
-                      "assets/icons/star_gold.png",
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  Container(
-                    height: 12,
-                    child: Image.asset(
-                      "assets/icons/star_gold.png",
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Text("5.0"),
-                ],
-              ),
-              Container(
-                height: 18,
-                child: Image.asset(
-                  "assets/icons/heart_primary.png",
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ],
-          )
-        ],
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
