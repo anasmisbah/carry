@@ -9,7 +9,7 @@ void main() {
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Application",
-      initialRoute: Routes.DETAIL_FURNITURE,
+      initialRoute: Routes.COUPON,
       getPages: AppPages.routes,
     ),
   );
